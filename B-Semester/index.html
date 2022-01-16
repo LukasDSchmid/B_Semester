@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VaultxMario</title>
+    <script src="https://kit.fontawesome.com/3949c8bd90.js" crossorigin="anonymous"></script>
+    <link href="//db.onlinewebfonts.com/c/48ace0790b9f3fa90535c1e410c4d13f?family=FreightBigProBook-Regular" rel="stylesheet" type="text/css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" crossorigin="anonymous"></script>
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="styleVault.css">
+    <link href="http://fonts.cdnfonts.com/css/md-grotesk" rel="stylesheet">
+    <script src="app.js" defer></script>
+</head>
+<body>
+        <nav class="topNav">
+            <button class="ham">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+            <img src="images/M_logo.png" alt="logo" id="navLogo">
+            <h2 id="fbb_nav">EDITION#1 Discovery</h2>
+        </nav>
+          <div class="overlay"></div>
+          <nav class="sideNav">
+            <button class="menuX">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <ul>
+                <li><p class="menuLink" >EDITION#1 Discovery</p></li>
+                <br>
+                <li><a class="menuLink" href="#join" id="fbb">JOIN VAULTxMARIO</a></li>
+                <br>
+                <li><p class="menuLink" id="fbb">CURRENT COUNTRY</p><button class="menuLink" id="myBtn1">Germany</button>
+                </li>
+                <br>
+                <li><p class="menuLink" id="fbb">LANGUAGE</p><button class="menuLink" id="myBtn">English</button></li>
+                <br>
+                <li><img class="menuLink" src="images/super_mario.png" alt="sm"></li>
+            </ul>
+          </nav>
+
+        <script>
+            const sideNav = document.querySelector(".sideNav")
+            const overlay = document.querySelector(".overlay")
+            const ham = document.querySelector(".ham")
+            const menuX = document.querySelector(".menuX")
+            const menuItems = document.querySelectorAll(".menuLink")
+
+            menuItems.forEach(menuItem => {
+            menuItem.addEventListener("click", toggleHamburger)
+            })
+
+            ham.addEventListener("click", toggleHamburger)
+            menuX.addEventListener("click", toggleHamburger)
+            overlay.addEventListener("click", toggleHamburger)
+
+            function toggleHamburger() {
+            overlay.classList.toggle("showOverlay")
+            sideNav.classList.toggle("showNav")
+            }
+        </script>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1 id="modalHeadline">Languages:</h1>
+                <br>
+                <a id="modalText" href="#">german <img src="images/germany.png"></a>
+                <br>
+                <a id="modalText" href="#">english <img src="images/united-states.png"></a>
+                <br>
+                <a id="modalText" href="#">spanish <img src="images/spain.png"></a>
+                <br>
+                <a id="modalText" href="#">italian <img src="images/italy.png"></a>
+                <br>
+                <a id="modalText" href="#">chinese <img src="images/china.png"></a>
+                <br>
+                <a id="modalText" href="#">thai <img src="images/thailand.png"></a>
+            </div>
+        </div>
+
+        <script>
+        var modal = document.getElementById("myModal");
+
+        var btn = document.getElementById("myBtn");
+
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+        modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+        modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            }
+        }
+        </script>
+
+        <div id="myModal1" class="modal1">
+            <div class="modal-content1">
+                <span class="close1">&times;</span>
+                <h1 id="modalHeadline">Countrys:</h1>
+                <br>
+                <a id="modalText" href="#">Germany <img src="images/germany.png"></a>
+                <br>
+                <a id="modalText" href="#">United States <img src="images/united-states.png"></a>
+                <br>
+                <a id="modalText" href="#">Spain <img src="images/spain.png"></a>
+                <br>
+                <a id="modalText" href="#">Italy <img src="images/italy.png"></a>
+                <br>
+                <a id="modalText" href="#">China <img src="images/china.png"></a>
+                <br>
+                <a id="modalText" href="#">Thailand <img src="images/thailand.png"></a>
+            </div>
+        </div>
+
+        <script>
+            var modal1 = document.getElementById("myModal1");
+
+            var btn1 = document.getElementById("myBtn1");
+
+            var span1 = document.getElementsByClassName("close1")[0];
+
+            btn1.onclick = function() {
+            modal1.style.display = "block";
+            }
+
+            span1.onclick = function() {
+            modal1.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+            if (event.target == modal1) {
+                modal1.style.display = "none";
+                }
+            }
+        </script>   
+
+        <div class="welcome__page">
+            <div class="grid-welcome1">
+                <div class="welcome__box"> 
+                    <img src="images/super_mario2.png" alt="sm2">
+                    <br>
+                    <p id="fbb">The new experimental online space, created for all visitors of Mushroom Kingdom!</p>
+                    <br>
+                    <a id="bt" type="button" href="#">DISCOVER MORE</a>
+                </div>
+            </div>
+            <div class="grid-welcome2">
+                <video class="clip" autoplay loop controls src="videos/super_mario_title.mp4" ></video>
+            </div>
+        </div>
+
+
+        <div class="coin__page">
+            <div class="grid-coin1">
+                <video src="videos/Coins_video.mp4" controls loop autoplay class="clip"></video>
+            </div>
+            <div class="grid-coin2">
+                <div class="coin__box">
+                    <h1 id="headline">COINS</h1>
+                    <br>
+                    <p id="fbb">Within VaultxMario, you’ll find treasures to 1up your game!</p> 
+                    <br>
+                    <button id="bt" type="submit">1Up yourself!</button>
+                </div>    
+            </div>
+        </div>
+
+        <div class="mario__page">
+                <div class="grid-item1">
+                    <div class="mario__vintage">
+                        <img src="images/pixel_mario.jpg" alt="pxl">
+                    </div>
+                    <p id="fbb_plumber"> Vintage Plumber Outfit</p>
+                </div>
+                <div class="grid-item2">
+                    <div class="mario__wedding">
+                        <video controls autoplay loop poster="images/wedding_mario.jpg" src="videos/wedding_mario.mp4" class="clip"></video>
+                        <p id="fbb">Wedding Suit 2017</p>
+                    </div>
+                </div>
+                <div class="grid-item3">
+                    <div class="mario__tanuki">
+                        <video controls autoplay loop poster="images/tanuki_mario.png" src="videos/golden_tanuki.mp4" class="clip"></video>
+                        <p id="fbb">Tanuki Style 2018</p>
+                    </div>
+                </div>  
+                <div class="grid-item4">
+                    <div class="mario__halloween">
+                        <video controls autoplay loop poster="images/zombie_mario.png" src="videos/zombie_mario_vid.mp4" class="clip"></video>
+                        <p id="fbb">Happy Halloween Outfit</p>
+                    </div>
+                </div>
+                <div class="grid-item5">
+                    <div class="mario__tennis">
+                        <video controls autoplay loop poster="images/tennis_mario.png" src="videos/aces_tennis.mp4" class="clip"></video>
+                        <p id="fbb">Tennis Style 2019</p>
+                    </div>
+                </div>
+        </div>
+
+                
+        <div id="powerUp_page">
+            <div class="grid-itemPu1">
+                <div class="vintage_pu">
+                    <img src="images/power_up.gif" alt="pu_gif">
+                    <p id="fbb_pu">Classic Power-Ups from all Generations of Mario</p>
+                </div>         
+            </div>
+            <div class="grid-itemPu2">
+                <div class="pu_box">
+                    <h2 id="headline">Power your way up to the finishline!</h2>
+                    <br>
+                    <p id="fbb">Fire up your Game!</p>
+                    <p id="fbb">Use Power Ups from all generations of Mushroom Kingdom to safe your princess!</p>
+                    <br>
+                    <button id="bt_pu" type="submit">DISCOVER MORE</button>
+                </div> 
+            </div>
+        </div>
+
+        <div class="peach__page">
+            <div class="grid-itemP1">
+                <div class="peach__princess">
+                    <img src="images/princess_peach.png" alt="princess">
+                </div>
+                <p id="fbb">Princess Peach, the crown princess of Mushroom Kingdom</p>      
+            </div>
+            <div class="grid-itemP2">
+                <div class="peach__racing">
+                    <video controls autoplay loop poster="images/peach_racing.png" src="videos/bike_peach_clip.mp4" class="clip"></video>
+                    <p id="fbb">Race Suit</p>
+                </div> 
+            </div>
+            <div class="grid-itemP3">
+                <div class="peach__sports">
+                    <video controls autoplay loop poster="images/peach_sports.png" src="videos/peach_dodgeball.mp4" class="clip"></video>
+                    <p id="fbb">Sporty Dress</p>
+                </div> 
+            </div>  
+            <div class="grid-itemP4">
+                <div class="peach__shroom">
+                    <video controls autoplay loop poster="images/peachette.png" src="videos/peachette_clip.mp4" class="clip"></video>
+                    <p id="fbb">Mushroom Power Up</p>
+                </div>                
+            </div>
+            <div class="grid-itemP5">
+                <div class="peach__stardress">
+                    <video controls autoplay loop poster="images/peach_stardress.png" src="videos/rosalina_clip.mp4" class="clip"></video>
+                    <p id="fbb">Galaxy Style</p>
+                </div>  
+            </div>
+        </div>
+
+
+
+        <div class="wooly_yoshi">
+            <div class="grid-itemY1">
+                <video controls autoplay loop poster="images/wo_yosh.jpg" src="videos/woolly_world_clip.mp4" class="clip"></video>
+            </div>
+            <div class="grid-itemY2">
+                <div class="yoshi_box">
+                    <h1 id="headline">SURPRISE</h1>
+                    <h1 id="headline">SURPRISE</h1>
+                    <br>
+                    <p id="fbb">Jump into the crafted world of woolly Yoshi!</p> 
+                    <br>
+                    <button id="bt" type="submit">Discover more</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="wool_world_page">
+            <div class="grid-itemW1">
+                <div class="wooly_dog">
+                    <video controls autoplay loop poster="images/bunson.png" src="videos/hot_dog_clip.mp4" class="clip"></video>
+                    <p id="fbb">Bunson: The hot dog!</p>
+                </div> 
+            </div>
+            <div class="grid-itemW2">
+                <div class="yoshi_daboy">
+                    <video controls autoplay loop poster="images/yoshi_boy.jpg" src="videos/yoshi_boy_clip.mp4" class="clip"></video>
+                    <p id="fbb">Woolly Yoshi</p>
+                </div> 
+            </div>
+            <div class="grid-itemW3">
+                <div class="paper_mario">
+                    <video controls autoplay loop poster="images/paper_mario.png" src="videos/paper_mario.mp4" class="clip"></video>
+                    <p id="fbb">Paper Mario</p>
+                </div> 
+            </div>
+            <div class="grid-itemW4">
+                <div class="origami_peach">
+                    <video controls autoplay loop poster="images/origami_peach.png" src="videos/origami_peach.mp4" class="clip"></video>
+                    <p id="fbb">Origami Peach?!</p>
+                </div> 
+            </div>
+        </div>
+
+        <script>
+            const clip = document.querySelectorAll('.clip');
+            for (let i = 0; i<clip.length; i++){
+                clip[i].addEventListener('mouseenter',
+                function(e){
+                    clip[i].play()
+                })
+                clip[i].addEventListener('mouseout', 
+                function(e){
+                    clip[i].pause()
+                })
+            }
+
+        </script>
+
+    <footer class="footer">
+  	 <div class="container_footer">
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4 id="fbb" >Need help?</h4>
+  	 			<ul class="footer_ul">
+  	 				<li><a href="#" id="fbb">FAQ's</a></li>
+  	 				<li><a href="#" id="fbb" >Contact us</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4 id="fbb">Company</h4>
+  	 			<ul>
+  	 				<li><a href="#" id="fbb">Welcome to Super Mario World!</a></li>
+  	 				<li><a href="#" id="fbb">Privacy & Cookie Policy</a></li>
+  	 				<li><a href="#" id="fbb">Legal</a></li>
+  	 				<li><a href="#" id="fbb">Corporate Information</a></li>
+  	 			</ul>
+  	 		</div>
+            
+            <div class="footer-col">
+                <h4 id="fbb">Find us on</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+  	 		<div class="footer-col">
+  	 			<h4 id="fbb">Visit also</h4>
+  	 			<div class="visit">
+  	 				<a href="#"><img src="images/1up.png" alt="1up"></a>
+  	 				<a href="#"><img src="images/plant.png" alt="pp"></a>
+                    <a href="#"><img src="images/spielkonsole.png" alt="gba"></a>
+                </div>
+  	 		</div>
+
+  	 	</div>
+  	 </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,2222 @@
+/*Links*/
+@import url(//db.onlinewebfonts.com/c/48ace0790b9f3fa90535c1e410c4d13f?family=FreightBigProBook-Regular);
+@font-face {font-family: "FreightBigProBook-Regular"; src: url("//db.onlinewebfonts.com/t/48ace0790b9f3fa90535c1e410c4d13f.eot"); src: url("//db.onlinewebfonts.com/t/48ace0790b9f3fa90535c1e410c4d13f.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/48ace0790b9f3fa90535c1e410c4d13f.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/48ace0790b9f3fa90535c1e410c4d13f.woff") format("woff"), url("//db.onlinewebfonts.com/t/48ace0790b9f3fa90535c1e410c4d13f.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/48ace0790b9f3fa90535c1e410c4d13f.svg#FreightBigProBook-Regular") format("svg"); }
+@import url('http://fonts.cdnfonts.com/css/md-grotesk');
+
+
+/*Navbar*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+.topNav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+}
+  
+#navLogo{
+    width: 4rem;
+    margin-left: 45rem;
+    text-align: center;
+    float: center;
+}
+
+#fbb_nav{
+    font-family: "Century Gothic";
+    color: white;
+    z-index: 1;
+    margin-left:25rem;
+    float: right;
+
+}
+
+.ham {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .menuX {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .sideNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 101;
+    background: rgb(71, 52, 188);;
+    width: 300px;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+  }
+  
+  .showNav {
+    transform: translateX(0);
+  }
+  
+  .sideNav ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    padding-top: 5rem;
+  }
+  
+  .sideNav ul li a {
+    display: block;
+    color: white;
+    padding-bottom: 10px;
+    margin-top: 1rem;
+    border-bottom: 2px solid ;
+    text-decoration: none;
+    font-family: "Century Gothic";
+    font-size: 1.5rem;
+  }
+
+  .sideNav p {
+    display: block;
+    color: white;
+    padding-bottom: 10px;
+    margin-top: 0.5rem;
+    text-decoration: none;
+    font-family: "Century Gothic";
+    font-size: 1.3rem;
+  }
+
+
+
+  .sideNav img{
+      width: 10rem;
+  }
+  
+  .sideNav ul li a:hover, .sideNav ul li a:focus {
+    border-bottom: 2px solid white;
+  }
+  
+  .overlay {
+    position: fixed;
+    display: none;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .showOverlay {
+    display: block;
+  }
+  
+  section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  section:nth-child(even) {
+    background-color: rgb(245, 245, 245);
+  }
+
+/*Fonts*/
+
+#headline{
+    font-family: "Freight Big Bro";
+}
+
+#fbb{
+    font-family: "Century Gothic";
+}
+
+/*Button*/
+
+#bt {
+    font-family: "Md Grotesk";
+    color: white;
+    background-color: black;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 80px;
+    cursor: pointer; 
+    text-decoration: none;
+}
+
+#bt_pu {
+    font-family: "Md Grotesk";
+    color: white;
+    background-color: black;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 80px;
+    cursor: pointer; 
+    text-decoration: none;
+}
+
+#myBtn {
+    font-family: "Century Gothic";
+    color: white;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 25px;
+    padding: 10px 80px;
+    cursor: pointer; 
+    text-decoration: underline;
+}
+
+#myBtn1 {
+    font-family: "Century Gothic";
+    color: white;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 25px;
+    padding: 10px 80px;
+    cursor: pointer; 
+    text-decoration: underline;
+}
+
+#bt :hover {
+    font-family: "Md Grotesk";
+    color: white;
+    background-color: rgb(12, 194, 12);
+    border: rgb(209, 209, 209);
+    padding: 20px 100px; 
+}
+
+/*Pop Up Language*/
+
+.modal {
+    display: none;
+    box-sizing: border-box; 
+    position: fixed;
+    text-align: center; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
+    border-radius: 20px;
+  }
+  
+  .modal-content {
+    background-color: black;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid white;
+    width: 60%;
+  }
+  
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #modalText{
+    font-family: "Century Gothic";
+    color: white;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+#modalHeadline{
+    font-family: "Century Gothic";
+    color: white;
+    text-decoration: none;
+}
+
+#modalText img{
+    width: 2rem;
+}
+
+/*Pop Up Country*/
+.modal1 {
+    display: none;
+    box-sizing: border-box; 
+    position: fixed;
+    text-align: center; 
+    z-index: 2; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
+    border-radius: 20px;
+  }
+  
+  .modal-content1 {
+    background-color: black;
+    margin: auto;
+    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid white;
+    width: 60% ;
+  }
+  
+  .close1 {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close1:hover,
+  .close1:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/*First Page*/
+
+.welcome__page{
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: 25% 25% 25% ;
+    width: 100%;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    background-color: #E73B28;
+    background-image: linear-gradient(transparent 50%, #4734BC 50%);
+    background-size: 40px 40px;
+}
+
+.welcome__page button:hover{
+    background-color: rgb(14, 185, 14);
+    border: rgba(187, 183, 183, 0.63);
+    padding: 20px 100px;
+    transition: padding 2s ease; 
+    animation: ease;
+}
+
+.grid-welcome1{
+    background: transparent;
+    padding: auto;
+    font-size: 30px;
+    text-align: center;
+    content: normal;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.welcome__box{
+    box-sizing: border-box;
+    padding: 20px 10px;
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    background-color: white;
+    border-radius: 20px;
+
+}
+
+.welcome__box img{
+    width: 200px;
+    height: auto;
+    text-align: center;
+}
+
+.grid-welcome2{
+    background:transparent;
+    padding: auto;
+    font-size: 30px;
+    text-align: center;
+    content: normal;
+}
+
+.grid-welcome2 video{
+    position:static;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 50rem;
+    padding: auto;
+    margin:none;
+}
+
+/* coin page */
+
+.coin__page{
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: 50% 50% ;
+    width: 100%;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    background:
+    linear-gradient(324deg, #232927 4%,   transparent 4%) -70px 43px,
+    linear-gradient( 36deg, #232927 4%,   transparent 4%) 30px 43px,
+    linear-gradient( 72deg, #FBE544 8.5%, transparent 8.5%) 30px 43px,
+    linear-gradient(288deg, #FBE544 8.5%, transparent 8.5%) -70px 43px,
+    linear-gradient(216deg, #FBE544 7.5%, transparent 7.5%) -70px 23px,
+    linear-gradient(144deg, #FBE544 7.5%, transparent 7.5%) 30px 23px,
+
+    linear-gradient(324deg, #232927 4%,   transparent 4%) -20px 93px,
+    linear-gradient( 36deg, #232927 4%,   transparent 4%) 80px 93px,
+    linear-gradient( 72deg, #FBE544 8.5%, transparent 8.5%) 80px 93px,
+    linear-gradient(288deg, #FBE544 8.5%, transparent 8.5%) -20px 93px,
+    linear-gradient(216deg, #FBE544 7.5%, transparent 7.5%) -20px 73px,
+    linear-gradient(144deg, #FBE544 7.5%, transparent 7.5%) 80px 73px;
+    background-color: #232927;
+    background-size: 100px 100px;
+    }
+
+.grid-coin1{
+    background-color: transparent;
+    padding: auto;
+    font-size: 30px;
+    text-align: center;
+    content: normal;
+}
+
+.grid-coin1 video{
+    position:static;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 50rem;
+}
+
+
+.grid-coin2{
+    background: transparent;
+    padding: auto;
+    font-size: 30px;
+    text-align: center;
+    content: normal;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.coin__box{
+    box-sizing: border-box;
+    padding: 20px 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+
+
+/* Mario Page */
+
+
+.mario__page{
+    display: inline-grid;
+    grid-template-columns: 33% 33.5% 33.5%;
+    grid-template-areas: 25% 25% 25%;
+    width: 100%;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    background-size: 60px 60px;   
+}
+
+/* vintage */
+
+.grid-item1 {
+    background-color: rgb(231, 59, 40);
+    padding: 5rem;
+    font-size: 30px;
+    text-align: center;
+    content: normal;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+
+.mario__vintage img{
+    width: 350px;
+    border-radius: 20px;
+    padding: 60px 20px;
+    
+}
+.mario__vintage{
+    box-sizing: border-box;
+    margin-top: 200px;
+    background-color: white;
+    border-radius: 20px;
+    padding: auto;
+}
+
+#fbb_plumber{
+    font-family: "Century Gothic";
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 80px;
+    margin-top: 20px;
+}
+
+/* wedding */
+
+.mario__wedding img{
+    width: 300px;
+    border-radius: 20px;   
+}
+
+.mario__wedding video{
+    width: 350px;
+    border-radius: 20px;  
+}
+
+.grid-item2 {
+    background-color: rgb(71, 52, 188);
+    padding: 5rem;
+    font-size: 30px;
+    text-align: center;
+    content: normal;
+}
+
+.mario__wedding{
+    box-sizing: border-box;
+    padding: auto;
+    padding-bottom: 20px;
+    margin-bottom: 100px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+/* Tanuki */
+
+.mario__tanuki image{
+    width: 300px;
+    border-radius: 20px;
+    
+}
+
+.mario__tanuki video{
+    width: 340px;
+    border-radius: 20px;
+    
+}
+
+.grid-item3 {
+    background-color: rgb(231, 59, 40);
+    padding: 5rem;
+    font-size: 30px;
+    text-align: center;
+    content: normal;
+}
+
+.mario__tanuki{
+    box-sizing: border-box;
+    padding: auto;
+    padding-bottom: 20px;
+    margin-bottom: 100px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+/* Zombie Mario */
+
+.mario__halloween img{
+    width: 300px;
+    border-radius: 20px;    
+}
+
+.mario__halloween video{
+    width: 340px;
+    border-radius: 20px;   
+}
+
+.grid-item4 {
+    background-color: rgb(231, 59, 40);
+    padding: 5rem;
+    font-size: 30px;
+    text-align: center;
+    content: normal;
+}
+
+.mario__halloween{
+    box-sizing: border-box;
+    padding: auto;
+    padding-bottom: 20px;
+    margin-bottom: auto;
+    margin-bottom: 100px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+/* Tennis Mario*/
+
+.mario__tennis img{
+    width: 300px;
+    border-radius: 20px;
+}
+
+.mario__tennis video{
+    width: 340px;
+    border-radius: 20px;   
+}
+
+.grid-item5 {
+    background-color: rgb(71, 52, 188);
+    padding: 5rem;
+    font-size: 30px;
+    text-align: center;
+    content: normal;
+}
+
+.mario__tennis{
+    box-sizing: border-box;
+    padding: auto;
+    padding-bottom: 20px;
+    margin-bottom: auto;
+    margin-bottom: 100px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+/* Peach Page */
+
+.peach__page{
+    display: inline-grid;
+    grid-template-columns: 33% 33.5% 33.5%;
+    grid-template-areas: 25% 25% 25% ;
+    width: 100%;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    background-color: rgb(212, 155, 188);
+    background-image: linear-gradient(45deg, rgb(255, 227, 243) 25%, transparent 25%, transparent 75%, rgb(255, 227, 243) 75%, rgb(255, 227, 243)),
+    linear-gradient(-45deg, rgb(255, 227, 243) 25%, transparent 25%, transparent 75%, rgb(255, 227, 243) 75%, rgb(255, 227, 243));
+    background-size: 60px 60px;  
+}
+
+
+/* Princess Peach*/
+
+.grid-itemP1 {
+    background: transparent;
+    padding: 5rem;
+    font-size: 30px;
+    text-align: center;
+    content: normal;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.peach__princess{
+    box-sizing: content-box;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    margin-right: 50px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 50px 20px;
+}
+
+.peach__princess img{
+    width: 250px;
+    border-radius: 20px; 
+}
+
+/* Racing Peach */
+
+.peach__racing img{
+    width: 100px;
+    border-radius: 20px;  
+}
+
+.peach__racing video{
+    width: 340px;
+    border-radius: 20px;  
+}
+
+
+.grid-itemP2 {
+    background: transparent;
+    padding: 5rem;
+    font-size: 30px;
+    text-align: center;
+    content: normal;
+}
+
+.peach__racing{
+    box-sizing: border-box;
+    padding: auto;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+/* Sports Dress */
+
+.peach__sports img{
+    width: 300px;
+    border-radius: 20px; 
+}
+
+.peach__sports video{
+    width: 340px;
+    border-radius: 20px; 
+}
+
+.grid-itemP3 {
+    background: transparent;
+    padding: 5rem;
+    font-size: 30px;
+    text-align: center;
+    content: normal;
+}
+
+.peach__sports{
+    box-sizing: border-box;
+    padding: auto;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+/* Peach Shroomdress */
+
+.peach__shroom img{
+    width: 300px;
+    border-radius: 20px;   
+}
+
+.peach__shroom video{
+    width: 340px;
+    border-radius: 20px;  
+}
+
+.grid-itemP4{
+    background: transparent;
+    padding: 5rem;
+    font-size: 30px;
+    text-align: center;
+    content: normal;
+}
+
+.peach__shroom{
+    box-sizing: border-box;
+    padding: auto;
+    padding-bottom: 20px;
+    margin-bottom: auto;
+    background-color: white;
+    border-radius: 20px;
+}
+
+/* Peach Stardress */
+
+.peach__stardress img{
+    width: 300px;
+    border-radius: 20px;  
+}
+
+.peach__stardress video{
+    width: 340px;
+    border-radius: 20px;  
+}
+
+
+.grid-itemP5{
+    background: transparent;
+    padding: 5rem;
+    font-size: 30px;
+    text-align: center;
+    content: normal;
+}
+
+.peach__stardress{
+    box-sizing: border-box;
+    padding: auto;
+    padding-bottom: 20px;
+    margin-bottom: auto;
+    margin-bottom: 100px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+/*Power Up Page*/
+
+
+#powerUp_page {
+    display: grid;
+    grid-template-columns: auto auto ;
+    grid-template-areas: 25% 25% 25% 25% ;
+    width: 100%;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    background-color: #EE9ACB;
+    background-image: linear-gradient(transparent 50%, #E73B28 50%);
+    background-size: 100px 100px;
+}
+
+.grid-itemPu1 {
+    background: transparent;
+    padding: 60px 10px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.vintage_pu img{
+    width: 450px;
+    border-radius: 20px;
+    margin-top: 150px;
+    margin-left: 200px;
+}
+
+
+.grid-itemPu2 {
+    background: transparent;
+    padding: 80px 20px;
+    padding-top: 60px;
+    margin: 50px 50px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.pu_box{
+    box-sizing: border-box;
+    padding: 50px 40px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 80px;
+    margin-top: 100px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#fbb_pu{
+    font-family: "Century Gothic";
+    margin-left: 200px;
+    margin-bottom: 100px;
+    font-size: 2rem;
+}
+
+
+/* Wooly Yoshi */
+
+
+.wooly_yoshi{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: 50% 50%;
+    width: 100%;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    background-color: #29D17D;
+    background-image: linear-gradient(transparent 50%, #4734BC 50%);
+    background-size: 50px 50px;;
+}
+
+.grid-itemY1{
+    background:transparent;
+    padding: auto;
+    font-size: 30px;
+    text-align: center;
+}
+
+.grid-itemY1 img{
+    display: block;
+    width: 750px;
+    height:auto;
+}
+
+.grid-itemY1 video{
+    display: block;
+    width: 800px;
+    height:auto;
+}
+
+.grid-itemY2{
+    padding: 5rem;
+    font-size: 30px;
+    text-align: center;
+    content: normal;
+    background: transparent;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.yoshi_box{
+    box-sizing: border-box;
+    padding: 20px 0px;
+    margin: auto;
+    background-color: white;
+    border-radius: 20px;
+}
+
+/* Wooly World */
+
+.wool_world_page{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas: 25% 25% 25% 25% ;
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Wooly Dog */
+
+.grid-itemW1{
+    background-color: #29D17D;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.wooly_dog{
+    box-sizing: border-box;
+    padding: auto;
+    padding-bottom: 20px;
+    margin:auto;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.wooly_dog img{
+    width: 350px;
+    border-radius: 20px;
+    height: auto;
+}
+
+.wooly_dog video{
+    width: 300px;
+    border-radius: 20px;
+    height: auto;
+}
+
+/*Wooly Yoshi*/
+
+.grid-itemW2{
+    background-color: #4734BC;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.yoshi_daboy{
+    box-sizing: border-box;
+    padding: auto;
+    padding-bottom: 20px;
+    margin:auto;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.yoshi_daboy img{
+    width: 350px;
+    border-radius: 20px;
+}
+
+.yoshi_daboy video{
+    width: 300px;
+    border-radius: 20px;
+}
+
+/*Paper_Mario*/
+
+.grid-itemW3{
+    background-color: #29D17D;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.paper_mario{
+    box-sizing: border-box;
+    padding: auto;
+    padding-bottom: 20px;
+    margin:auto;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.paper_mario img{
+    width: 350px;
+    border-radius: 20px;
+}
+
+.paper_mario video{
+    width: 300px;
+    border-radius: 20px;
+}
+
+/*Origami Peach*/
+
+.grid-itemW4{
+    background-color: #4734BC;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.origami_peach{
+    box-sizing: border-box;
+    padding: auto;
+    padding-bottom: 20px;
+    margin:auto;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.origami_peach img{
+    width: 350px;
+    border-radius: 20px;
+}
+
+.origami_peach video{
+    width: 300px;
+    border-radius: 20px;
+}
+
+/*Clips*/
+
+.clip :hover{
+    filter: grayscale(0);
+}
+
+video::-webkit-media-controls {
+    display:none !important;
+}
+
+/* Footer */
+
+.container_footer{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.footer_ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+    list-style: none;
+
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+.footer-col .visit a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	transition: all 0.5s ease;
+}
+
+.footer-col .visit img{
+    width: 50px;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+    }
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+    }
+}
+
+@media (max-width: 916px) {
+    /*nav*/
+
+    .topNav {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        background-color: #000000;
+    }
+      
+    #navLogo{
+        width: 2rem;
+        margin: auto;
+        text-align: center;
+        float: right;
+        color: transparent;
+    }
+    
+    #fbb_nav{
+        font-family: "Century Gothic";
+        color: white;
+        z-index: 1;
+        margin:auto;
+        float: right;
+        font-size: 20px;
+    }
+    
+    .ham {
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        margin-left: 0.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: white;
+      }
+      
+      .menuX {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        width: 2rem;
+        height: 2rem;
+        margin-left: 0.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: white;
+      }
+    
+    /*Welcome Page*/
+
+    .welcome__page{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 100% ;
+        width: 100%;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        background-color: #E73B28;
+        background-image: linear-gradient(transparent 50%, #4734BC 50%);
+        background-size: 40px 40px;
+        margin: auto;
+        padding: auto;
+    }
+
+    .welcome__box{
+        box-sizing: border-box;
+        padding: 10px 5px;
+        margin: 30px 30px;
+        background-color: white;
+        border-radius: 20px;
+    }
+
+    .grid-welcome2{
+        background:transparent;
+        padding: auto;
+        font-size: 30px;
+        text-align: center;
+        content: normal;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    
+    .grid-welcome2 video{
+        position:static;
+        right: 0;
+        bottom: 0;
+        width: 60px;
+        min-width: 100%;
+        min-height: 100%;
+        padding: auto;
+        margin: auto;
+    }
+
+    /*Coin Page*/
+
+    .coin__page{
+        display: inline-grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 100% ;
+        width: 100%;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        margin: auto;
+        padding: auto;
+    } 
+
+    .grid-coin1{
+        background-color: transparent;
+        padding: auto;
+        font-size: 30px;
+        text-align: center;
+        content: normal;
+    }
+    
+    .grid-coin1 video{
+        position:static;
+        right: 0;
+        bottom: 0;
+        width: 60px;
+        padding: 0;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    
+    .grid-coin2{
+        background: transparent;
+        padding: auto;
+        font-size: 30px;
+        text-align: center;
+        content: normal;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    
+    .coin__box{
+        box-sizing: border-box;
+        padding: 10px 5px;
+        margin: 30px 30px;
+        background-color: white;
+        border-radius: 20px;
+    }
+
+    /* Mario Page */
+
+    .mario__page{
+        display: inline-grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 100% ;
+        width: 100%;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        margin: auto;
+        padding: auto;
+    }
+    
+
+    .grid-item1 {
+        padding: auto;
+        font-size: 15px;
+        text-align: center;
+        content: normal;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    
+    
+    .mario__vintage img{
+        width: 200px;
+        border-radius: 20px;     
+    }
+
+    .mario__vintage{
+        box-sizing: border-box;
+        background-color: white;
+        border-radius: 20px;
+        padding: auto;
+        margin: auto;
+        content: normal;
+        text-align: center;
+    }
+
+    #fbb_plumber{
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+
+    /*wedding*/
+    
+    .mario__wedding video{
+        width: 250px;
+        border-radius: 20px;  
+    }
+    
+    .grid-item2 {
+        padding: auto;
+        font-size: 20px;
+        text-align: center;
+        content: normal;
+    }
+
+    .mario__wedding{
+        margin: auto;
+        padding: auto;  
+    }
+    
+    /*tanuki*/
+ 
+    .mario__tanuki video{
+        width: 250px;
+        border-radius: 20px;        
+    }
+    
+    .grid-item3 {
+        padding: auto;
+        font-size: 20px;
+        text-align: center;
+        content: normal;
+    }
+    
+    .mario__tanuki{
+        margin: auto;
+        padding: auto;  
+    }
+
+    /*halloween*/
+
+    .mario__halloween video{
+        width: 250px;
+        border-radius: 20px;    
+    }
+    
+    .grid-item4 {
+        padding: auto;
+        font-size: 20px;
+        text-align: center;
+        content: normal;
+        background-color: #4734BC;
+    }
+    
+    .mario__halloween{
+        margin: auto;
+        padding: auto;  
+    }
+
+    /*tennis*/
+
+    .mario__tennis video{
+        width: 250px;
+        border-radius: 20px;   
+    }
+    
+    .grid-item5 {
+        background-color: rgb(231, 59, 40);;
+        padding: auto;
+        font-size: 20px;
+        text-align: center;
+        content: normal;
+    }
+    
+    .mario__tennis{
+        margin: auto;
+        padding: auto; 
+    }
+
+    /*PowerUp*/
+
+    #powerUp_page {
+        display: inline-grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 100% ;
+        width: 100%;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        margin: auto;
+        padding: auto;
+    }
+    
+    .grid-itemPu1 {
+        padding: auto;
+        text-align: center;
+        content: normal;
+    }
+    
+    .vintage_pu img{
+        width: 250px;
+        border-radius: 20px;
+        margin: auto;
+    }
+    
+    
+    .grid-itemPu2 {
+        background: transparent;
+        padding: 80px 20px;
+        padding-top: 60px;
+        margin: 50px 50px;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .pu_box{
+        margin: auto;
+        margin-top: 5px;
+        padding: 15px 15px;
+        font-size: 20px;  
+    }
+    
+    #fbb_pu{
+        font-family: "Century Gothic";
+        text-align: center;
+        font-size: 30px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    #bt_pu{
+        content: normal;
+        float: inline-start;
+        margin: 5px 0;
+        padding: 5px 40px;
+        font-size: 20px;
+    }
+
+    /*Peach*/
+
+    .peach__page{
+        display: inline-grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 100% ;
+        width: 100%;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        margin: auto;
+        padding: auto;
+    }
+
+    /*princess peach*/
+
+    .grid-itemP1 {
+        padding: auto;
+        font-size: 25px;
+        text-align: center;
+        content: normal;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    
+    .peach__princess{
+        box-sizing: border-box;
+        background-color: white;
+        border-radius: 30px;
+        padding: auto;
+        margin: auto;
+        content: normal;
+        text-align: center;
+    }
+    
+    .peach__princess img{
+        width: 200px;
+    }
+    
+    /*race*/
+
+    .peach__racing video{
+        width: 250px;
+        border-radius: 20px;   
+    }
+    
+    
+    .grid-itemP2 {
+        padding: auto;
+        font-size: 20px;
+        text-align: center;
+        content: normal;
+    }
+    
+    .peach__racing{
+        margin: auto;
+        padding: auto; 
+    }
+
+    /*sporty*/
+
+    .peach__sports video{
+        width: 250px;
+        border-radius: 20px;     
+    }
+    
+    .grid-itemP3 {
+        padding: auto;
+        font-size: 20px;
+        text-align: center;
+        content: normal;
+    }
+    
+    .peach__sports{
+        margin: auto;
+        padding: auto;  
+    }
+
+    /*shroom*/
+
+    .peach__shroom video{
+        width: 250px;
+        border-radius: 20px;   
+    }
+    
+    .grid-itemP4{
+        padding: auto;
+        font-size: 20px;
+        text-align: center;
+        content: normal;
+    }
+    
+    .peach__shroom{
+        margin: auto;
+        padding: auto;  
+    }
+    
+    /*stardress*/
+
+    .peach__stardress video{
+        width: 250px;
+        border-radius: 20px;   
+    }
+    
+    
+    .grid-itemP5{
+        padding: auto;
+        font-size: 20px;
+        text-align: center;
+        content: normal;
+    }
+    
+    .peach__stardress{
+        margin: auto;
+        padding: auto;
+    }
+
+    /*woolly yoshi*/
+
+    .wooly_yoshi{
+        display: inline-grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 100% ;
+        width: 100%;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        margin: auto;
+        padding: auto;
+    }
+    
+    .grid-itemY1{
+        background-color: transparent;
+        padding: auto;
+        text-align: center;
+        content: normal;
+    }
+    
+    .grid-itemY1 video{
+        position:static;
+        width: 415px;
+        margin: 0;
+    }
+    
+    .grid-itemY2{
+        padding: auto;
+        text-align: center;
+        content: normal;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    
+    .yoshi_box{
+        box-sizing: border-box;
+        margin: auto;
+        margin-top: 5px;
+        padding: 15px 15px;
+        font-size: 20px;  
+        border-radius: 20px;
+    }
+
+    .yoshi_box button{
+        content: normal;
+        float: inline-start;
+        margin: auto;
+        
+        padding: 5px 25px;
+        font-size: 25px;
+    }
+
+    /*woolly world*/
+
+    .wool_world_page{
+        display: inline-grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 100% ;
+        width: 100%;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        margin: auto;
+        padding: auto;
+    }
+
+}
+
+@media (max-width: 916px) {
+    /*nav*/
+
+    .topNav {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        background-color: #000000;
+    }
+      
+    #navLogo{
+        width: 2rem;
+        margin: auto;
+        text-align: center;
+        float: right;
+        color: transparent;
+    }
+    
+    #fbb_nav{
+        font-family: "Century Gothic";
+        color: white;
+        z-index: 1;
+        margin:auto;
+        float: right;
+        font-size: 20px;
+    }
+    
+    .ham {
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        margin-left: 0.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: white;
+      }
+      
+      .menuX {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        width: 2rem;
+        height: 2rem;
+        margin-left: 0.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: white;
+      }
+    
+    /*Welcome Page*/
+
+    .welcome__page{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 100% ;
+        width: 100%;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        background-color: #E73B28;
+        background-image: linear-gradient(transparent 50%, #4734BC 50%);
+        background-size: 40px 40px;
+        margin: auto;
+        padding: auto;
+    }
+
+    .welcome__box{
+        box-sizing: border-box;
+        padding: 10px 5px;
+        margin: 30px 30px;
+        background-color: white;
+        border-radius: 20px;
+    }
+
+    .grid-welcome2{
+        background:transparent;
+        padding: auto;
+        font-size: 30px;
+        text-align: center;
+        content: normal;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    
+    .grid-welcome2 video{
+        position:static;
+        right: 0;
+        bottom: 0;
+        width: 60px;
+        min-width: 100%;
+        min-height: 100%;
+        padding: auto;
+        margin: auto;
+    }
+
+    /*Coin Page*/
+
+    .coin__page{
+        display: inline-grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 100% ;
+        width: 100%;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        margin: auto;
+        padding: auto;
+    } 
+
+    .grid-coin1{
+        background-color: transparent;
+        padding: auto;
+        font-size: 30px;
+        text-align: center;
+        content: normal;
+    }
+    
+    .grid-coin1 video{
+        position:static;
+        right: 0;
+        bottom: 0;
+        width: 60px;
+        padding: 0;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    
+    .grid-coin2{
+        background: transparent;
+        padding: auto;
+        font-size: 30px;
+        text-align: center;
+        content: normal;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    
+    .coin__box{
+        box-sizing: border-box;
+        padding: 10px 5px;
+        margin: 30px 30px;
+        background-color: white;
+        border-radius: 20px;
+    }
+
+    /* Mario Page */
+
+    .mario__page{
+        display: inline-grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 100% ;
+        width: 100%;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        margin: auto;
+        padding: auto;
+    }
+    
+
+    .grid-item1 {
+        padding: auto;
+        font-size: 15px;
+        text-align: center;
+        content: normal;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    
+    
+    .mario__vintage img{
+        width: 200px;
+        border-radius: 20px;     
+    }
+
+    .mario__vintage{
+        box-sizing: border-box;
+        background-color: white;
+        border-radius: 20px;
+        padding: auto;
+        margin: auto;
+        content: normal;
+        text-align: center;
+    }
+
+    #fbb_plumber{
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+
+    /*wedding*/
+    
+    .mario__wedding video{
+        width: 250px;
+        border-radius: 20px;  
+    }
+    
+    .grid-item2 {
+        padding: auto;
+        font-size: 20px;
+        text-align: center;
+        content: normal;
+    }
+
+    .mario__wedding{
+        margin: auto;
+        padding: auto;  
+    }
+    
+    /*tanuki*/
+ 
+    .mario__tanuki video{
+        width: 250px;
+        border-radius: 20px;        
+    }
+    
+    .grid-item3 {
+        padding: auto;
+        font-size: 20px;
+        text-align: center;
+        content: normal;
+    }
+    
+    .mario__tanuki{
+        margin: auto;
+        padding: auto;  
+    }
+
+    /*halloween*/
+
+    .mario__halloween video{
+        width: 250px;
+        border-radius: 20px;    
+    }
+    
+    .grid-item4 {
+        padding: auto;
+        font-size: 20px;
+        text-align: center;
+        content: normal;
+        background-color: #4734BC;
+    }
+    
+    .mario__halloween{
+        margin: auto;
+        padding: auto;  
+    }
+
+    /*tennis*/
+
+    .mario__tennis video{
+        width: 250px;
+        border-radius: 20px;   
+    }
+    
+    .grid-item5 {
+        background-color: rgb(231, 59, 40);;
+        padding: auto;
+        font-size: 20px;
+        text-align: center;
+        content: normal;
+    }
+    
+    .mario__tennis{
+        margin: auto;
+        padding: auto; 
+    }
+
+    /*PowerUp*/
+
+    #powerUp_page {
+        display: inline-grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 100% ;
+        width: 100%;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        margin: auto;
+        padding: auto;
+    }
+    
+    .grid-itemPu1 {
+        padding: auto;
+        text-align: center;
+        content: normal;
+    }
+    
+    .vintage_pu img{
+        width: 250px;
+        border-radius: 20px;
+        margin: auto;
+    }
+    
+    
+    .grid-itemPu2 {
+        background: transparent;
+        padding: 80px 20px;
+        padding-top: 60px;
+        margin: 50px 50px;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .pu_box{
+        margin: auto;
+        margin-top: 5px;
+        padding: 15px 15px;
+        font-size: 20px;  
+    }
+    
+    #fbb_pu{
+        font-family: "Century Gothic";
+        text-align: center;
+        font-size: 30px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    #bt_pu{
+        content: normal;
+        float: inline-start;
+        margin: 5px 0;
+        padding: 5px 40px;
+        font-size: 20px;
+    }
+
+    /*Peach*/
+
+    .peach__page{
+        display: inline-grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 100% ;
+        width: 100%;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        margin: auto;
+        padding: auto;
+    }
+
+    /*princess peach*/
+
+    .grid-itemP1 {
+        padding: auto;
+        font-size: 25px;
+        text-align: center;
+        content: normal;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    
+    .peach__princess{
+        box-sizing: border-box;
+        background-color: white;
+        border-radius: 30px;
+        padding: auto;
+        margin: auto;
+        content: normal;
+        text-align: center;
+    }
+    
+    .peach__princess img{
+        width: 200px;
+    }
+    
+    /*race*/
+
+    .peach__racing video{
+        width: 250px;
+        border-radius: 20px;   
+    }
+    
+    
+    .grid-itemP2 {
+        padding: auto;
+        font-size: 20px;
+        text-align: center;
+        content: normal;
+    }
+    
+    .peach__racing{
+        margin: auto;
+        padding: auto; 
+    }
+
+    /*sporty*/
+
+    .peach__sports video{
+        width: 250px;
+        border-radius: 20px;     
+    }
+    
+    .grid-itemP3 {
+        padding: auto;
+        font-size: 20px;
+        text-align: center;
+        content: normal;
+    }
+    
+    .peach__sports{
+        margin: auto;
+        padding: auto;  
+    }
+
+    /*shroom*/
+
+    .peach__shroom video{
+        width: 250px;
+        border-radius: 20px;   
+    }
+    
+    .grid-itemP4{
+        padding: auto;
+        font-size: 20px;
+        text-align: center;
+        content: normal;
+    }
+    
+    .peach__shroom{
+        margin: auto;
+        padding: auto;  
+    }
+    
+    /*stardress*/
+
+    .peach__stardress video{
+        width: 250px;
+        border-radius: 20px;   
+    }
+    
+    
+    .grid-itemP5{
+        padding: auto;
+        font-size: 20px;
+        text-align: center;
+        content: normal;
+    }
+    
+    .peach__stardress{
+        margin: auto;
+        padding: auto;
+    }
+
+    /*woolly yoshi*/
+
+    .wooly_yoshi{
+        display: inline-grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 100% ;
+        width: 100%;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        margin: auto;
+        padding: auto;
+    }
+    
+    .grid-itemY1{
+        background-color: transparent;
+        padding: auto;
+        text-align: center;
+        content: normal;
+    }
+    
+    .grid-itemY1 video{
+        position:static;
+        width: 415px;
+        margin: 0;
+    }
+    
+    .grid-itemY2{
+        padding: auto;
+        text-align: center;
+        content: normal;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    
+    .yoshi_box{
+        box-sizing: border-box;
+        margin: auto;
+        margin-top: 5px;
+        padding: 15px 15px;
+        font-size: 20px;  
+        border-radius: 20px;
+    }
+
+    .yoshi_box button{
+        content: normal;
+        float: inline-start;
+        margin: auto;
+        
+        padding: 5px 25px;
+        font-size: 25px;
+    }
+
+    /*woolly world*/
+
+    .wool_world_page{
+        display: inline-grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 100% ;
+        width: 100%;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        margin: auto;
+        padding: auto;
+    }
+
+    .wooly_dog video{
+        width: 350px;
+        border-radius: 20px;
+        height: auto;
+    }
+
+    .yoshi_daboy video{
+        width: 350px;
+        border-radius: 20px;
+        height: auto;
+    }
+
+    .paper_mario video{
+        width: 350px;
+        border-radius: 20px;
+        height: auto;
+    }
+
+    .origami_peach video{
+        width: 350px;
+        border-radius: 20px;
+        height: auto;
+    }
+}
+
